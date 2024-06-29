@@ -10,7 +10,7 @@ git clone https://github.com/jrdavismaine/jsdomrepl.git && cd jsdomrepl && npm i
 
 # REPL
 
-When starting the REPL, the JSDOM constructor is always added, window and document handles when `-f` is used.
+When starting the REPL, the JSDOM constructor and dom object are always added. The window and document handles as well when `-f` is used.
 
 # Load repl, manually add html to JSDOM constructor.
 
