@@ -47,3 +47,13 @@ jsdom-repl> window.document.querySelector('h1').innerHTML;
 jsdom-repl> document.querySelector('h1').innerHTML;
 'Hello'
 ```
+
+# Miscellaneous
+
+Running node without the `--no-warnings` option will cause the `The punycode module is deprecated.` message to display. Once this is fixed the `npm run start` script will be updated. See [JSDOM issue 3613](https://github.com/jsdom/jsdom/issues/3613) for more information.
+
+```
+$ node repl.js
+jsdom-repl> (node:28764) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
