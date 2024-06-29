@@ -5,9 +5,7 @@ A repl used to interact with JSDOM.
 # Install
 
 ```
-git clone https://github.com/jrdavismaine/jsdomrepl.git
-cd jsdomrepl
-npm i
+git clone https://github.com/jrdavismaine/jsdomrepl.git && cd jsdomrepl && npm i
 ```
 
 # REPL
