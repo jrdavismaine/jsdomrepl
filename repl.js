@@ -14,8 +14,8 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM(html);
 const replServer = repl.start({ useColors: true, prompt: "jsdom-repl> " });
 replServer.context.JSDOM = JSDOM;
-replServer.context.dom = dom;
 if (file) {
+  replServer.context.dom = dom;
   replServer.context.window = dom.window;
   replServer.context.document = dom.window.document;
 }
