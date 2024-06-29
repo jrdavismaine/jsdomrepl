@@ -10,7 +10,7 @@ git clone https://github.com/jrdavismaine/jsdomrepl.git && cd jsdomrepl && npm i
 
 # REPL
 
-When starting the REPL, the JSDOM constructor is always added. The dom, window and document handles as well when `-f` is used.
+When starting the REPL, the JSDOM class is always added. The dom, window and document handles are added as well when `-f` is used.
 
 # Load repl, manually add html to JSDOM constructor.
 
@@ -26,6 +26,12 @@ jsdom-repl> var dom = new JSDOM('<html><body><h1>TEST</h1></body></html>');
 undefined
 jsdom-repl> dom.window.document.querySelector('h1').innerHTML;
 'TEST'
+jsdom-repl> JSDOM.fragment('<h1>Test</h1>').firstElementChild.textContent;
+'Test'
+jsdom-repl> var newdom = await JSDOM.fromFile('examples/test.html');
+undefined
+jsdom-repl> newdom.window.document.querySelector('h1').textContent;
+'Hello'
 jsdom-repl> document
 Uncaught ReferenceError: document is not defined
 jsdom-repl> window
@@ -42,10 +48,14 @@ $ npm run start -- -f examples/test.html
 > jsdomrepl@1.0.0 start
 > node --no-warnings repl.js -f examples/test.html
 
+jsdom-repl> dom.window.document.querySelector('h1').textContent;
+'Hello'
 jsdom-repl> window.document.querySelector('h1').innerHTML;
 'Hello'
 jsdom-repl> document.querySelector('h1').innerHTML;
 'Hello'
+jsdom-repl> JSDOM.fragment('<h1>Test</h1>').firstElementChild.textContent;
+'Test'
 ```
 
 # Miscellaneous
