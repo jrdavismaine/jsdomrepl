@@ -1,0 +1,15 @@
+{
+  "name": "jsdomrepl",
+  "version": "1.0.0",
+  "description": "A repl used to interact with JSDOM",
+  "main": "repl.js",
+  "scripts": {
+    "start": "node --no-warnings repl.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "jsdom": "^24.1.0"
+  }
+}
