@@ -26,12 +26,27 @@ jsdom-repl> var dom = new JSDOM('<html><body><h1>TEST</h1></body></html>');
 undefined
 jsdom-repl> dom.window.document.querySelector('h1').innerHTML;
 'TEST'
+jsdom-repl> dom.serialize()
+'<html><head></head><body><h1>TEST</h1></body></html>'
 jsdom-repl> JSDOM.fragment('<h1>Test</h1>').firstElementChild.textContent;
 'Test'
 jsdom-repl> var newdom = await JSDOM.fromFile('examples/test.html');
 undefined
 jsdom-repl> newdom.window.document.querySelector('h1').textContent;
 'Hello'
+jsdom-repl> newdom.serialize()
+'<!DOCTYPE html><html lang="en"><head>\n' +
+  '    <meta charset="UTF-8">\n' +
+  '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+  '    <title>Test</title>\n' +
+  '  </head>\n' +
+  '  <body>\n' +
+  '    <h1>Hello</h1>\n' +
+  '    <h2>World</h2>\n' +
+  '    <div id="message">This is a message.</div>\n' +
+  '  \n' +
+  '\n' +
+  '</body></html>'
 jsdom-repl> document
 Uncaught ReferenceError: document is not defined
 jsdom-repl> window
@@ -56,6 +71,19 @@ jsdom-repl> document.querySelector('h1').innerHTML;
 'Hello'
 jsdom-repl> JSDOM.fragment('<h1>Test</h1>').firstElementChild.textContent;
 'Test'
+jsdom-repl> dom.serialize()
+'<!DOCTYPE html><html lang="en"><head>\n' +
+  '    <meta charset="UTF-8">\n' +
+  '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+  '    <title>Test</title>\n' +
+  '  </head>\n' +
+  '  <body>\n' +
+  '    <h1>Hello</h1>\n' +
+  '    <h2>World</h2>\n' +
+  '    <div id="message">This is a message.</div>\n' +
+  '  \n' +
+  '\n' +
+  '</body></html>'
 ```
 
 # Miscellaneous
