@@ -89,4 +89,4 @@ jsdom-repl> (node:28764) [DEP0040] DeprecationWarning: The `punycode` module is 
 
 # Interesting jsdom issues
 
-[Attempting to set ARIA properties on ElementInternals results in an error. #3732](https://github.com/jsdom/jsdom/issues/3732)<br>
+<a href="https://github.com/jsdom/jsdom/issues/3732" target="_blank">Attempting to set ARIA properties on ElementInternals results in an error. #3732</a><br>
