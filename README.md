@@ -34,10 +34,10 @@ jsdom-repl> newdom.window.document.querySelector('h1').textContent;
 'Hello'
 jsdom-repl> JSDOM.fragment('<h1>Test</h1>').firstElementChild.textContent;
 'Test'
-jsdom-repl> document
-Uncaught ReferenceError: document is not defined
 jsdom-repl> window
 Uncaught ReferenceError: window is not defined
+jsdom-repl> document
+Uncaught ReferenceError: document is not defined
 ```
 
 # Load repl with html file
